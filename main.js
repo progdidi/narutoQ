@@ -32,12 +32,13 @@ const quotes = [
 
 ]
 
-const quote = document.querySelector('.quote__content-text');
-const quoteBtn = document.querySelector('.quote__content-btn');
+const quote = document.querySelector('.quotes__content-text');
+const quoteBtn = document.querySelector('.quotes__content-btn');
 
 quote.innerHTML = quotes[0].text;
 
 quoteBtn.addEventListener('click', () => {
     let random = Math.floor(Math.random() * 10);
     quote.innerHTML = quotes[random].text;
+    quote.classList.add('animated')
 })
