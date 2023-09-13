@@ -43,3 +43,22 @@ quoteBtn.addEventListener('click', () => {
     source.innerHTML = quotes[random].source;
     quote.classList.add('animated')
 })
+
+function setTime() {
+    const hourId = document.querySelector('.timer__hours');
+    const minutesId = document.querySelector('.timer__minutes');
+    const secondsId = document.querySelector('.timer__seconds');
+
+    const now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    hourId.innerHTML = hours;
+    minutesId.innerHTML = minutes;
+    secondsId.innerHTML = seconds;
+
+    
+}
+
+setInterval(setTime, 1000);
