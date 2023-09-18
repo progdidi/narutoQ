@@ -44,21 +44,38 @@ quoteBtn.addEventListener('click', () => {
     quote.classList.add('animated')
 })
 
+
+
+
+//timer and clocks
+
 function setTime() {
-    const hourId = document.querySelector('.timer__hours');
-    const minutesId = document.querySelector('.timer__minutes');
-    const secondsId = document.querySelector('.timer__seconds');
+    const hourId = document.querySelector('.clock__hours');
+    const minutesId = document.querySelector('.clock__minutes');
+    const secondsId = document.querySelector('.clock__seconds');
 
     const now = new Date();
     let hours = now.getHours();
     let minutes = now.getMinutes();
     let seconds = now.getSeconds();
 
-    hourId.innerHTML = hours;
-    minutesId.innerHTML = minutes;
-    secondsId.innerHTML = seconds;
-
-    
+    hourId.innerHTML = hours < 9 ? `0${hours}` : hours;
+    minutesId.innerHTML = minutes < 9 ? `0${minutes}` : minutes;
+    secondsId.innerHTML = seconds < 9 ? `0${seconds}` : seconds;
 }
 
 setInterval(setTime, 1000);
+
+function setTimer() {
+    const hourId = document.querySelector('.timer__hours');
+    const minutesId = document.querySelector('.timer__minutes');
+    const secondsId = document.querySelector('.timer__seconds');
+
+    const start = document.querySelector('.play');
+    
+    start.addEventListener('click', () => {
+        const timerTime = new Date();
+        console.log(timerTime);
+        
+    })
+}
