@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #E7EAEF;
+    background: radial-gradient(circle at 10% 20%, rgb(254, 255, 165) 0%, rgb(255, 232, 182) 90%);;
     font-weight: 700;
     font-size: 18px;
 }
@@ -132,12 +132,17 @@ $pink-color: #E78F63;
     }
 }
 
-.clock {
+.addContent {
     position: fixed;
     right: 0;
     bottom: 0;
+    min-width: 300px;
+}
+
+.clock {
     background-color: pink;
     padding: 20px;
+    margin-bottom: 20px;
     &__inner {
         display: flex;
         align-items: center;
@@ -147,10 +152,12 @@ $pink-color: #E78F63;
 
 @keyframes slidein {
     from {
-      transform: translateX(70%);
+        animation-timing-function: cubic-bezier(.55,.055,.675,.19);
+      opacity: 0;
     }
     to {
-      transform: translateX(0%);
+        animation-timing-function: cubic-bezier(.175,.885,.32,1);
+      opacity: 1;
     }
 }
 

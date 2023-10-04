@@ -1,0 +1,1 @@
+# BeGood - supportive quotes generator and timer
