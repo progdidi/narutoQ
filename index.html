@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐛</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital@1&family=Montserrat&family=Sansita:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital@1&family=Montserrat&family=Sansita:wght@700&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Naruto Quotes</title>
 </head>
 <body>
@@ -18,16 +19,45 @@
                 <div class="quotes__inner">
                     <div class="quotes__content">
                         <h1 class="quotes__content-title">Всё будет хорошо! Meow!</h1>
-                        <p class="quotes__content-subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora adipisci nihil illum nam labore sed iure, veritatis magnam blanditiis impedit aperiam eaque quibusdam voluptas perspiciatis quae mollitia doloribus vitae provident.</p>
+
+                        <div class="timer">
+                            <div class="timer__inner">
+                                <div class="timer__hours">00</div> :
+                                <div class="timer__minutes">25</div> :
+                                <div class="timer__seconds">00</div>
+                            </div>
+                            <div class="timer__buttons">
+                                <button class="timer__btn play">⏵︎</button>
+                                <button class="timer__btn pause">⏸︎</button>
+                                <button class="timer__btn stop"> ⏹︎</button>
+                                
+                            </div>
+                            
+                        </div>
 
                         <div class="quotes__content-main">
-                            <div class="quotes__content-text"></div>
+                            <p class="quotes__content-text"></p>
+                            <h6 class="quotes__content-source"></h6>
                             <button class="quotes__content-btn">support me!</button>
                         </div>
 
-                        
+
                     </div>
                     <img src="img/bg-cat.png" alt="" class="quotes__img">
+
+                    <div class="addContent">
+                        <div class="clock">
+                            <div class="clock__inner">
+                                <div class="clock__hours">01</div> :
+                                <div class="clock__minutes">01</div> :
+                                <div class="clock__seconds">01</div>
+                            </div>
+                        </div>
+
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4UzRiKRXDaA4qwE4Vn2pJB? utm_source=generator" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    </div>
+                    
                 </div>
                 
             </div>
@@ -37,7 +67,7 @@
     
 
     
-
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <script src="main.js"></script>
     
 </body>

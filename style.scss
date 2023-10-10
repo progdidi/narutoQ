@@ -1,0 +1,167 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle at 10% 20%, rgb(254, 255, 165) 0%, rgb(255, 232, 182) 90%);;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+.container {
+    max-width: 1420px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+// переменные
+$pink-color: #E78F63;
+
+
+.quotes {
+    max-height: 100vh;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    &__content {
+        max-width: 50%;
+        margin: 0 auto;
+        background-color: rgba(247, 247, 247, 0.5);
+        border-radius: 15px;
+        padding: 10px 20px;
+        height: auto;
+        position: absolute;
+        left: 10px;
+        top: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-title {
+            text-align: center;
+        }
+        &-subtitle {
+            margin-bottom: 70px;
+        }
+        
+        &-main {
+            background-color: #F7C7B1;
+            padding: 40px 20px;
+            max-width: 80%;
+            margin: 0 auto;
+            border-radius: 5px;
+            text-align: center;
+            min-height: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+        
+        &-text {
+            margin-bottom: 10px;
+        }
+
+        &-source {
+            margin-bottom: 20px;
+        }
+        
+        &-btn {
+            background-color: $pink-color;
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            width: 200px;
+            margin: 0 auto;
+            font-family: inherit;
+        }
+    }
+}
+
+.quotes__img {
+    object-fit: cover;
+    max-width: 50%;
+    max-height: 100vh;
+    display: block;
+    margin-left: auto;
+}
+
+.timer {
+    max-width: 170px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    &__hours {
+        padding: 20px 10px;
+        border-radius: 5px;
+        font-size: 60px;
+    }
+
+    &__minutes {
+        padding: 20px 10px;
+        border-radius: 5px;
+        font-size: 60px;
+    }
+
+    &__seconds {
+        padding: 20px 10px;
+        border-radius: 5px;
+        font-size: 60px;
+    }
+
+    &__buttons {
+        justify-content: center;
+        gap: 5px;
+    }
+    &__btn {
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 15px;
+        background-color: $pink-color;
+        cursor: pointer;
+    }
+}
+
+.addContent {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 300px;
+}
+
+.clock {
+    background-color: pink;
+    padding: 20px;
+    margin-bottom: 20px;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@keyframes slidein {
+    from {
+        animation-timing-function: cubic-bezier(.55,.055,.675,.19);
+      opacity: 0;
+    }
+    to {
+        animation-timing-function: cubic-bezier(.175,.885,.32,1);
+      opacity: 1;
+    }
+}
+
+.animated {
+    animation-name: slidein;
+    animation-duration: 3s;
+}
